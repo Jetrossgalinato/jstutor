@@ -1,19 +1,13 @@
 import React from 'react';
+import { cheatsheetData } from '../data/cheatsheetData';
 import CheatCard from './CheatCard';
-import { CheatItem } from '../data/cheatsheetData';
 
-type Props = {
-  items: CheatItem[];
-};
-
-const CheatList: React.FC<Props> = ({ items }) => {
-  return (
-    <div>
-      {items.map((item, index) => (
-        <CheatCard key={index} item={item} />
-      ))}
-    </div>
-  );
-};
+const CheatList: React.FC = () => (
+  <div>
+    {cheatsheetData.map((item, idx) => (
+      <CheatCard key={idx} item={item} />
+    ))}
+  </div>
+);
 
 export default CheatList;
