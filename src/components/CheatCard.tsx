@@ -13,6 +13,12 @@ const CheatCard: React.FC<Props> = ({ item }) => {
       <pre style={{ background: '#f4f4f4', padding: '0.5rem', borderRadius: '4px', overflowX: 'auto' }}>
         <code>{item.code}</code>
       </pre>
+      <details style={{ marginTop: '0.5rem' }}>
+        <summary style={{ cursor: 'pointer', fontWeight: 'bold' }}>Explanation</summary>
+        <pre style={{ background: '#eef6fa', padding: '0.5rem', borderRadius: '4px', whiteSpace: 'pre-wrap' }}>
+          {item.explanation}
+        </pre>
+      </details>
     </div>
   );
 };
